@@ -1,6 +1,9 @@
 /* eslint-env node */
 'use strict';
 
-module.exports = {
-  name: 'ember-journal'
-};
+const EngineAddon = require('ember-engines/lib/engine-addon');
+
+module.exports = EngineAddon.extend({
+  name: 'ember-journal',
+  lazyLoading: false
+});
