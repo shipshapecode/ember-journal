@@ -1,0 +1,10 @@
+{{#each model as |post|}}
+  <h4>
+    {{#link-to 'post' post}}
+      {{post.title}}
+    {{/link-to}}
+    <div>
+      By {{post.author}} {{moment-format (concat post.month '-' post.day '-' post.year) 'LL'}}
+    </div>
+  </h4>
+{{/each}}

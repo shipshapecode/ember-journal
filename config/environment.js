@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   const ENV = {
-    modulePrefix: 'ember-blog',
+    modulePrefix: 'ember-journal',
     environment
   };
 
