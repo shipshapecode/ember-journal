@@ -7,6 +7,7 @@ export default Model.extend({
   author: attr('string'),
   date: attr('date'),
   slug: attr('string'),
+  text: attr('string'),
   title: attr('string'),
 
   day: computed('date', function() {
