@@ -1,9 +1,12 @@
 {
   "name": "ember-journal",
   "version": "0.0.2",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A blogging engine for Ember apps.",
   "keywords": [
-    "ember-addon"
+    "blog",
+    "ember-addon",
+    "ember-engines",
+    "journal"
   ],
   "license": "MIT",
   "author": "",
