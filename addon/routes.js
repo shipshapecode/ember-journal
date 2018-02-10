@@ -1,5 +1,5 @@
 import buildRoutes from 'ember-engines/routes';
 
 export default buildRoutes(function() {
-  this.route('post', { path: '/:year/:month/:day/:slug/' });
+  this.route('post', { path: '/*path/' });
 });

@@ -1,0 +1,1 @@
+export { default } from 'ember-journal/components/author-row/component';

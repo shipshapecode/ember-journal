@@ -1,10 +1,27 @@
 import Route from '@ember/routing/route';
-import {inject as service} from '@ember/service';
+import RSVP from 'rsvp';
+import { get, setProperties } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
-  store: service(),
+  // headData: service(),
+  markdownResolver: service(),
 
   model() {
-    return this.get('store').findAll('blog-post');
-  }
+    return get(this, 'markdownResolver').tree('blog').then((tree) => {
+      return new RSVP.Promise((resolve) => {
+        const sortedPosts = tree.files.sortBy('attributes.date').reverse();
+        resolve(sortedPosts);
+      });
+    });
+  },
+
+  // afterModel() {
+  //   return setProperties(get(this, 'headData'), {
+  //     title: 'Blog - Ship Shape',
+  //     description: 'Ramblings about Ember.js, JavaScript, life, liberty, and the pursuit of happiness.',
+  //     type: 'website',
+  //     url: 'https://shipshape.io/blog/'
+  //   });
+  // }
 });

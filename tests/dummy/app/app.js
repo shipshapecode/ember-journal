@@ -11,7 +11,8 @@ const App = Application.extend({
     emberJournal: {
       dependencies: {
         services: [
-          'store'
+          'headData',
+          'markdownResolver'
         ]
       }
     }

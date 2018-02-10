@@ -1,0 +1,1 @@
+export { default } from 'ember-journal/components/blog-post-menu/component';
